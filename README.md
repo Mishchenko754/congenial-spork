@@ -17,15 +17,22 @@ all_IMAGES.read_data(data_dir = r'C:/Users/Dexstop/images')
 
 Принимает на вход:
 
-+ df_all (pandas.core.frame.DataFrame) - дата фрейм, в столбце которого содержатся пути к изображениям;
++ df_all (pandas.core.frame.DataFrame) - дата фрейм с данными (в столбцах находятся пути к анализируемым изображениям);
 
-+ v_record (str) - строковый объект, входящий в состав пути к изображениям и соответствующий определенной видеозаписи. 
++ v_record (str) - строковый объект, входящий в состав пути к изображениям и соответствующий определенной видеозаписи. Нужен для отбора строк из df_all по значению.
+
+```cmd
+from glob import glob
+from pathlib2 import Path
+mask = Path(r'C:/Task_Astrocytes') / '**'/ '**'/ '***.png'
+file_names = glob(str(mask))
+df_all = pd.DataFrame({путь к файлу .png} : file_names)
+xy_dataFrame.events1800(df_all, v_record = 'video_rec_1)
+```
 
 Возвращает список строк - путей к картинкам, находящимся в одной папке и полученных из одной записи.
 
-
-
-### count_Sq_max(pathes_of_images_list) 
+### count_Sq_max(pathes_of_images_list)
 
 type(pathes_of_images_list)
  - numpy.ndarray
@@ -41,7 +48,7 @@ type(pathes_of_images_list)
 
 + title (str)- строковый объект, который будет являтся заголовком графика и указывать на тип видеозаписи.
 
-На выходе функция выдает график, по оси X которого отложено время (мин), по оси Y - значения площади.
+На выходе функция выдает график, по оси X которого отложено время (мин), по оси Y - значения площади (в кв. мкм).
 
 ### astro_pack.countforhist.count_hist(pathes_of_images_list) 
 
