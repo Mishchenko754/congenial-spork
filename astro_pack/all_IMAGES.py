@@ -6,13 +6,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from glob import glob
 def read_data(mask):
+    '''
+type(mask) - pathlib2.WindowsPath
+Функция read_data принимает на вход пути к файлам.
+Возвращает dataFrame, в столбце которого содержится информация о пути к изображениям. 
+Пример:
+mask = Path(r'C:/nn/Task_Astrocytes/Task_Astrocytes') / '**'/ '**' / '**'/ '***.png')
+all_images.read_data(mask)
+'''
     file_names = glob(str(mask))
     file_names.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
-    im_path_es = []
+    paths_to_images = []
     for file_name in file_names:
-        file_path = Path(file_name)
-        im_path = file_name
-        im_path_es.append(im_path)
+        path_to_image = file_name
+        paths_to_images.append(path_to_image)
     df_all = pd.DataFrame({
-        'file_path': im_path_es})
+        'file_path' : paths_to_images})
     return df_all
