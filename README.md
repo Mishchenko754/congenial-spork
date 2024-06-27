@@ -9,9 +9,10 @@
 ## Примеры изображений
 Примеры графиков и гистограмм, которые можно построить при вызове функций и astro_pack.
 
-![Двумерная гистограмма](/C:/Users/Dexstop/results/31_08_2020_tser1_hist.png)
+![Двумерная гистограмма](https://drive.google.com/file/d/1suY_y_pERvzpZo69XdjScAqbsi27iiMP/view?usp=sharing)
 
-![График](/C:/Users/Dexstop/results/31_08_2020_tser1_plot.png)
+![График](https://drive.google.com/file/d/1JQUdQddbPd3L34RPTDVUBKzZeEme_BMx/view?usp=sharing)
+
 ## Список функций:
 
 ### all_IMAGES.read_data(mask) 
