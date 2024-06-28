@@ -6,7 +6,7 @@ def save_table(squares_max, file_paths, data_dir_save):
 
 - squares_max (numpy.ndarray) - массив, элементами которого являются значения площади;
 
-- file_pathes (numpy.ndarray) - список, элементами которого являются адреса изображений;
+- file_paths (numpy.ndarray) - список, элементами которого являются адреса изображений;
 
 - data_dir_save (str) - адрес директории, где сохранится таблица.
 

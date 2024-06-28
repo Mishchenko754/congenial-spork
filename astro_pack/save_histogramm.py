@@ -23,5 +23,5 @@ save_hist.savehist(hist, file_pathes = ['c\\d\\d\\d\\d\\d\\d\\dddsdvsdv'], data_
     data_path = Path(data_dir_save)
     objects_of_file_system = file_pathes[0].split('\\')
     title = objects_of_file_system[5]
-    file_location_png = data_path/f'{title}_hist.png'
+    file_location_png = data_path / f'{title}_hist.png'
     hist.savefig(file_location_png, dpi=300, bbox_inches='tight')

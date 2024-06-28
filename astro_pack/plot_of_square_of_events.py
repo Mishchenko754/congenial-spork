@@ -19,7 +19,7 @@ plot_of_square_of_events.plot_square_to_time(squares_max, title='square, S')
     '''
     t = np.arange(0, len(squares_max)) / 2
     plt.rcParams['font.family'] = 'serif'
-    PLOT = plt.figure(figsize=(6.5, 3.37), dpi=300.0)
+    figure = plt.figure(figsize=(6.5, 3.37), dpi=300.0)
     plt.rc('axes', titlesize=8)
     plt.title("Зависимость площади самой большой области от номера кадра ")
     plt.plot(t, squares_max, '#FF0055', linewidth=2, label=f'{title}')
@@ -35,4 +35,4 @@ plot_of_square_of_events.plot_square_to_time(squares_max, title='square, S')
             minits.append(int(t[i] // 60))
     plt.xticks (ticks=np.arange(min(t), max(t), 60.0), labels=minits)
     plt.show()
-    return PLOT
+    return figure

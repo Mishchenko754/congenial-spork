@@ -1,5 +1,5 @@
 from pathlib2 import Path
-def save_plt(PLOT, file_paths, data_dir_save):
+def save_plt(figure, file_paths, data_dir_save):
     '''
 Функция принимает на вход:
 
@@ -22,4 +22,4 @@ save_plot.save_plt(hist, file_paths=['a\\b\\c\\d\\e\\r'], data_dir=r'C:/Users/us
     objects_of_file_system = file_paths[0].split('\\')
     title = objects_of_file_system[5]
     file_location_png = data_path / f'{title}_plot.png'
-    PLOT.savefig(file_location_png, dpi=300, bbox_inches='tight')
+    figure.savefig(file_location_png, dpi=300, bbox_inches='tight')
